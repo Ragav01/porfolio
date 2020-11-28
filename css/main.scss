@@ -1,0 +1,111 @@
+@font-face{
+  src: url("../font/futura-medium.ttf");
+  font-family: futura-medium;
+}
+@font-face{
+  src: url("../font/Futura-Heavy.ttf");
+  font-family: futura-bold;
+}
+@font-face{
+  src: url("../font/futura-light.ttf");
+  font-family: futura-light;
+}
+* {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+body {
+  font-family: futura-medium;
+  background: #000000;
+-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+nav {
+    height: 80px;
+    width: 100vw;
+    background: #000000;
+    position: fixed;
+    top: 0;
+  }
+
+.hero{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  h3{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-left: 4px;
+    opacity: .7;
+    font-weight: 600;
+    position: absolute;
+    top: 30vh;
+    z-index: -1;
+  }
+  h1{
+    line-height: 1.2em;
+    font-size: 79px;
+    font-family: futura-bold;
+    position: absolute;
+    top: 34vh;
+    color: #000;
+    height: 100px;
+    overflow: hidden;
+  }
+  .f-line{
+    z-index: -1;
+    padding-top: 0;
+    animation: fslideUp .4s;
+
+    @keyframes fslideUp {
+      0%{padding-top: 100px;}
+      100%{padding-top: 0;}
+    }
+  }
+  .s-line{
+    top: 46vh;
+    cursor: pointer;
+    padding-top: 0;
+    animation: lslideUp .8s;
+    @keyframes lslideUp {
+      0%{padding-top: 100px;}
+      100%{padding-top: 0;}
+    }
+  }  
+}
+#design, #development{
+  position: absolute;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: .3s ease-out;
+  transform: translate(-50%,-50%);
+  video{
+    height: 100%;
+    width: 140%;
+    border-radius: 50%;
+    position: absolute;
+  }
+}
+
+
